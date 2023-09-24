@@ -1,0 +1,31 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+}
+.cabecalho{
+    text-align: center;
+    background-color: #201f1f;
+    height: 120px;
+    border-bottom-right-radius : 30px;
+    border-bottom-left-radius : 30px;
+}
+.cabecalho h1{
+    color: white;
+    padding-top: 15px;
+    font-size: 25px;
+
+}
+.linguagens{
+    display: flex;
+    margin-top: 20px;
+    margin-top: 30px;
+}
+.li{
+    margin: 0 auto;
+    color: white;
+    border: 1px solid white;
+    padding: 7px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+}

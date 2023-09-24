@@ -1,3 +1,20 @@
 body{
     background-color: rgb(140, 198, 248);
 }
+
+.conteudo{
+    padding-top: 20px;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.exemplo{
+    background-color: #ffffff;
+    width: 33%;
+    height: 400px;
+    margin: 1px;
+} 
