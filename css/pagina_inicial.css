@@ -17,5 +17,45 @@ body{
     width: 30%;
     height: 400px;
     margin: 5px;
-    text-align: center;    
+    text-align: center;
+    padding: 12px;    
+    border-radius: 15px;
+
 }
+.como{
+    background-color: rgb(150, 146, 146);
+    width: 90%;
+    height: 85%;
+    margin: 6px auto;
+    border-radius: 15px;
+    text-align: left;
+    color: #020202;
+    padding-left: 15px;
+    padding-top: 15px;
+
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 1250px) {
+    
+    .exemplo{
+        max-width: 400px;
+        width: 45%;
+    }
+    
+  }
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------*/
+
+  
+@media only screen and (max-width: 1100px) {
+    
+    .exemplo{
+        max-width: 450px;
+        width: 100%;
+    }
+    
+  }
