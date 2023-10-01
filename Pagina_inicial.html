@@ -10,17 +10,17 @@
 <body>
 
     <div class="cabecalho">
-        <h1>INHAL</h1>
+        <a href="Pagina_inicial.html"><h1>INHAL</h1></a>
         <div class="linguagens">
-            <div class="li html">HTML</div>
-            <div class="li css">CSS</div>
-            <div class="li js">JAVASCRIPT</div>
-            <div class="li php">PHP</div>
-            <div class="li java">JAVA</div>
-            <div class="li kotlin">KOTLIN</div>
-            <div class="li c"> C </div>
-            <div class="li c++">C++</div>
-            <div class="li c#"> C# </div>
+            <div class="li html"><a href="explicaçãohtml/inicialhtml.html">HTML</a></div>
+            <div class="li css"><a href="explicaçãocss/inicialcss.html">CSS</a></div>
+            <div class="li js"><a href="explicaçãojavascript/inicialjavascript.html">JAVASCRIPT</a></div>
+            <div class="li php"><a href="explicaçãophp/inicialphp.html">PHP</a></div>
+            <div class="li java"><a href="explicaçãojava/inicialjava.html">JAVA</a></div>
+            <div class="li kotlin"><a href="explicaçãokotlin/inicialkotlin.html">KOTLIN</a></div>
+            <div class="li c"><a href="explicaçaoc/inicialc.html">C</a></div>
+            <div class="li c++"><a href="explicaçãoc++/inicialc++.html">C++</a></div>
+            <div class="li c#"><a href="explicaçãoccharp/inicialccharp.html">C#</a></div>
 
 
         </div>
@@ -30,18 +30,21 @@
         <div class="exemplo conteudohtml">
             <h2>HTML</h2>
             <div class="como">
-                &lt;!DOCTYPE html> <br>
-                &lt;html> <br>
-                &lt;head> <br>
-                &lt;title>HTML Tutorial&lt;/title> <br>
-            	&lt;/head> <br>
-            	&lt;body> <br>
+                <pre>
+&lt;!DOCTYPE html> 
+&lt;html> 
+&lt;head> 
+    &lt;title>HTML Tutorial&lt;/title> 
+&lt;/head> 
+&lt;body> 
             
-            	&lt;h1>This is a heading&lt;/h1> <br>
-                &lt;p>This is a paragraph.&lt;/p> <br>
+    &lt;h1>This is a heading&lt;/h1> 
+    &lt;p>This is a paragraph.&lt;/p> 
                 
-                &lt;/body> <br>
-                &lt;/html> <br>
+&lt;/body> 
+&lt;/html> 
+                </pre>
+                <div class="mais"><a href="explicaçãohtml/inicialhtml.html">aprenda html</a></div>
             </div>
         </div>
         <div class="exemplo conteudocss">
@@ -61,6 +64,8 @@ p {
     font-family: verdana; 
 } 
                   </pre>
+                  <div class="mais"><a href="explicaçãocss/inicialcss.html">aprenda css</a></div>
+
             </div>
         </div>
         <div class="exemplo conteudojs">
@@ -78,12 +83,29 @@ p {
 } 
                 &lt;/script> <br>
                 </pre>
+                <div class="mais"><a href="explicaçãojavascript/inicialjavascript.html">aprenda javascript</a></div>
             </div>
         </div>
         <div class="exemplo conteudophp">
             <h2>PHP</h2>
             <div class="como">
-                
+                <pre>
+&lt;!DOCTYPE HTML>
+&lt;html>  
+&lt;body>
+                    
+    &lt;form action="welcome.php" method="post">
+      Name: &lt;input type="text" name="name">
+      E-mail:&lt;input type="text"name="email">
+      &lt;input type="submit">
+    &lt;/form>
+                    
+&lt;/body>
+&lt;/html>
+
+                </pre>
+                <div class="mais"><a href="explicaçãophp/inicialphp.html">aprenda php</a></div>
+
             </div>
         </div>
         <div class="exemplo conteudojava">
@@ -91,11 +113,13 @@ p {
             <div class="como">
                 <pre>
 public class Main { 
-        public static void main(String[] args) { 
-        System.out.println("Hello World"); 
+      public static void main(String[] args){ 
+      System.out.println("Hello World"); 
     } 
 } 
                   </pre>
+                  <div class="mais"><a href="explicaçãojava/inicialjava.html">aprenda java</a></div>
+
             </div>
         </div>
         <div class="exemplo conteudokotlin">
@@ -114,6 +138,8 @@ fun main() {
     println(c1.year) 
 }
 </pre>
+<div class="mais"><a href="explicaçãokotlin/inicialkotlin.html">aprenda kotlin</a></div>
+
             </div>
         </div>
         <div class="exemplo conteudoc">
@@ -129,18 +155,46 @@ int main() {
     return 0;
 }
                 </pre>
+                <div class="mais"><a href="explicaçaoc/inicialc.html">aprenda c</a></div>
+
             </div>
         </div>
         <div class="exemplo conteudoc++">
             <h2>C++</h2>
             <div class="como">
-                
+                <pre>
+                    
+int main() {
+    string cars[3] ={"BMW", "Ford", "Mazda"};
+    cars[0] = "Opel";
+    cout << cars[0];
+    return 0;
+  }
+  
+                </pre>
+                <div class="mais"><a href="explicaçãoc++/inicialc++.html">aprenda c++</a></div>
+
             </div>
         </div>
         <div class="exemplo conteudoc#">
             <h2>C#</h2>
             <div class="como">
-                
+                <pre>
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      string[]cars={"Volvo","BMW","Ford",};
+      cars[0] = "Opel";
+      Console.WriteLine(cars[0]);    
+    }
+  }
+}
+                </pre>
+                <div class="mais"><a href="explicaçãoccharp/inicialccharp.html">aprenda c#</a></div>
+
             </div>
         </div>
 
