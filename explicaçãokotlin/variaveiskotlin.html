@@ -31,50 +31,49 @@
             <a href="#">sintaxe do kotlin</a>
             <a href="operaçãokotlin.html">operação no kotlin</a>
             <a href="variaveiskotlin.html">variaveis no kotlin</a>
+            <a href="tiposdedadoskotlin.html">Tipos de dados Kotlin</a>
+
         
         </div>
         <div class="cont">
-            <div class="borda">
-                <div class="descricao">
-                    <h2>Como chamar a função principal ?</h2>
-                    <h3>a palavra chave "fun" é usada para declarar uma função a função "main()" é a função principal do codigo kotlin, 
-                        ela é usada para execurtar o codigo dentro das chaves "{}" como por exemplo o "println()" que serve para imprimir uma mensagem, segue o exemplo a baixo
-                    </h3>
-                    <div class="exemplo">
-                        <pre>
-        fun main() { 
-            println("Hello World!")
-            println("I am learning Kotlin.")
-            println("It is awesome!")
-        }
-        
-        <hr>
-        Hello World!
-        I am learning Kotlin.
-        It is awesome!
-                        </pre>
-                    </div>
-                </div>
-            </div>
+               
             <div class="borda">
                 <div class="descricao">
                     <h2>Como funciona as variaveis ?</h2>
                     <h3> as variaveis podem ser atribuidas pelo "var" (variaveis mutaveis) e pelo "val" (variaveis imutaveis) atribuindo um valor com o sinal de igual "=", segue o exemplo a baixo  </h3>
                     <div class="exemplo">
                         <pre>
-        fun main() {
-            var name = "John"
-            val idade = "25"
-            println(name)
-            name = "Robert"
-            println(name)
-            println(idade)
-        }
-        
+fun main() {
+    var name = "John"
+    val idade = "25"
+    println(name)
+    name = "Robert"
+    println(name)
+    println(idade)
+}  
         <hr>
-        John
-        Robert
-        25
+John
+Robert
+25
+        
+                        </pre>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="borda">
+                <div class="descricao">
+                    <h2>Como funciona as variaveis declaradas sem valor ?</h2>
+                    <h3> as variaveis podem ser decclaradas sem serem atribuidas, Porém , isso só é possível quando você especifica o tipo, segue o exempl  </h3>
+                    <div class="exemplo">
+                        <pre>
+fun main() {
+    var name: String
+    name = "John"
+    println(name)
+}
+        <hr>
+john
         
                         </pre>
                     </div>

@@ -31,56 +31,51 @@
             <a href="#">sintaxe do kotlin</a>
             <a href="operaçãokotlin.html">operação no kotlin</a>
             <a href="variaveiskotlin.html">variaveis no kotlin</a>
+            <a href="tiposdedadoskotlin.html">Tipos de dados Kotlin</a>
+            <a href="stringkotlin.html">string cotlin</a>
+
         
         </div>
         <div class="cont">
+               
             <div class="borda">
                 <div class="descricao">
-                    <h2>Como chamar a função principal ?</h2>
-                    <h3>a palavra chave "fun" é usada para declarar uma função a função "main()" é a função principal do codigo kotlin, 
-                        ela é usada para execurtar o codigo dentro das chaves "{}" como por exemplo o "println()" que serve para imprimir uma mensagem, segue o exemplo a baixo
-                    </h3>
+                    <h2>strings em Kotlin são formados por caracteris  </h2>
+                    <h3>No Kotlin, como as strings são formadas por caracteris elas podem ser pegas separadamentes como uma array com os conchetes "[]", segue o exemplo</h3>
                     <div class="exemplo">
                         <pre>
-        fun main() { 
-            println("Hello World!")
-            println("I am learning Kotlin.")
-            println("It is awesome!")
-        }
-        
-        <hr>
-        Hello World!
-        I am learning Kotlin.
-        It is awesome!
-                        </pre>
-                    </div>
-                </div>
-            </div>
-            <div class="borda">
-                <div class="descricao">
-                    <h2>Como funciona as variaveis ?</h2>
-                    <h3> as variaveis podem ser atribuidas pelo "var" (variaveis mutaveis) e pelo "val" (variaveis imutaveis) atribuindo um valor com o sinal de igual "=", segue o exemplo a baixo  </h3>
-                    <div class="exemplo">
-                        <pre>
-        fun main() {
-            var name = "John"
-            val idade = "25"
-            println(name)
-            name = "Robert"
-            println(name)
-            println(idade)
-        }
-        
-        <hr>
-        John
-        Robert
-        25
-        
+fun main() {
+    var txt = "Hello World"
+    println(txt[0]) // first element/character
+    println(txt[2]) // third element/character
+}
+<hr>
+H
+l
                         </pre>
                     </div>
                 </div>
                 
             </div>
+            <div class="borda">
+                <div class="descricao">
+                    <h2>length em kotlin  </h2>
+                    <h3>No Kotlin, o length serve para ver o tamanho da string, segue o exemplo</h3>
+                    <div class="exemplo">
+                        <pre>
+fun main() {
+    var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    println("The length of the txt string is: " + txt.length);
+}
+<hr>
+The length of the txt string is: 26
+
+                        </pre>
+                    </div>
+                </div>
+                
+            </div>
+            
         </div>
         
     </div>
