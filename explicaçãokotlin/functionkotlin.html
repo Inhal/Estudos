@@ -25,8 +25,9 @@
 
         </div>
     </div>
-    <div class="corpo">
-        <div class="topicos">
+
+<div class="corpo">
+    <div class="topicos">
             <a href="inicialkotlin.html">kotlin ?</a>
             <a href="#">sintaxe do kotlin</a>
             <a href="operaçãokotlin.html">operação no kotlin</a>
@@ -34,53 +35,52 @@
             <a href="tiposdedadoskotlin.html">Tipos de dados Kotlin</a>
             <a href="stringkotlin.html">string kotlin</a>
             <a href="functionkotlin.html">function kotlin</a>
-
-
+    
+    </div>
+    <div class="cont">
         
-        </div>
-        <div class="cont">
-               
-            <div class="borda">
-                <div class="descricao">
-                    <h2>strings em Kotlin são formados por caracteris  </h2>
-                    <h3>No Kotlin, como as strings são formadas por caracteris elas podem ser pegas separadamentes como uma array com os conchetes "[]", segue o exemplo</h3>
-                    <div class="exemplo">
-                        <pre>
-fun main() {
-    var txt = "Hello World"
-    println(txt[0]) // first element/character
-    println(txt[2]) // third element/character
+        <div class="borda">
+            <div class="descricao">
+                <h2>oque são functions em kotlin ?</h2>
+                <h3>functions são ações que podem ser feitos na hora que são escritas ou guardadas com um nome para serem chamadas mais tarde no main() , segue o exemplo abaixo</h3>
+                <div class="exemplo">
+                    <pre>
+fun printMessage(message: String): Unit {                               // 1
+    println(message)
 }
-<hr>
-H
-l
-                        </pre>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="borda">
-                <div class="descricao">
-                    <h2>length em kotlin  </h2>
-                    <h3>No Kotlin, o length serve para ver o tamanho da string, segue o exemplo</h3>
-                    <div class="exemplo">
-                        <pre>
-fun main() {
-    var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    println("The length of the txt string is: " + txt.length);
+                        
+fun printMessageWithPrefix(message: String, prefix: String = "Info") {  // 2
+    println("[$prefix] $message")
 }
-<hr>
-The length of the txt string is: 26
-
-                        </pre>
-                    </div>
+                        
+fun sum(x: Int, y: Int): Int {                                          // 3
+    return x + y
+}
+                        
+fun multiply(x: Int, y: Int) = x * y                                    // 4
+                        
+fun main() {
+    printMessage("Hello")                                               // 5                    
+    printMessageWithPrefix("Hello", "Log")                              // 6
+    printMessageWithPrefix("Hello")                                     // 7
+    printMessageWithPrefix(prefix = "Log", message = "Hello")           // 8
+    println(sum(1, 2))                                                  // 9
+    println(multiply(2, 4))                                             // 10
+}
+    
+    <hr>
+    Hello
+    [Log] Hello
+    [Info] Hello
+    [Log] Hello
+    3
+    8
+                    </pre>
                 </div>
-                
             </div>
-            
         </div>
         
     </div>
-        </body>
-        </html>
-    
+</div>
+    </body>
+    </html>
