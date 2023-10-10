@@ -36,6 +36,8 @@
             <a href="stringkotlin.html">string kotlin</a>
             <a href="functionkotlin.html">function kotlin</a>
             <a href="varagkotlin.html">varag kotlin</a>
+            <a href="classeskotlin.html">classes kotlin</a>
+
 
     
     </div>
@@ -43,41 +45,28 @@
         
         <div class="borda">
             <div class="descricao">
-                <h2>oque são functions em kotlin ?</h2>
-                <h3>functions são ações que podem ser feitos na hora que são escritas ou guardadas com um nome para serem chamadas mais tarde no main() , segue o exemplo abaixo</h3>
+                <h2>oque são classes em kotlin ?</h2>
+                <h3>classes são estruturas de dados moldaveis , segue o exemplo abaixo</h3>
                 <div class="exemplo">
                     <pre>
-fun printMessage(message: String): Unit {                               // 1
-    println(message)
-}
-                        
-fun printMessageWithPrefix(message: String, prefix: String = "Info") {  // 2
-    println("[$prefix] $message")
-}
-                        
-fun sum(x: Int, y: Int): Int {                                          // 3
-    return x + y
-}
-                        
-fun multiply(x: Int, y: Int) = x * y                                    // 4
+class Customer                                  // 1
+
+class Contact(val id: Int, var email: String)   // 2
                         
 fun main() {
-    printMessage("Hello")                                               // 5                    
-    printMessageWithPrefix("Hello", "Log")                              // 6
-    printMessageWithPrefix("Hello")                                     // 7
-    printMessageWithPrefix(prefix = "Log", message = "Hello")           // 8
-    println(sum(1, 2))                                                  // 9
-    println(multiply(2, 4))                                             // 10
+                        
+    val customer = Customer()                   // 3
+                            
+    val contact = Contact(1, "mary@gmail.com")  // 4
+                        
+    println(contact.id)                         // 5
+    contact.email = "jane@gmail.com"            // 6
 }
     
     <hr>
-    Hello
-    [Log] Hello
-    [Info] Hello
-    [Log] Hello
-    3
-    8
-                    </pre>
+1
+
+               </pre>
                 </div>
             </div>
         </div>
