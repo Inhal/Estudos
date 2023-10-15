@@ -38,6 +38,8 @@
             <a href="varagkotlin.html">varag kotlin</a>
             <a href="classeskotlin.html">classes kotlin</a>
             <a href="genericskotlin.html">generic kotlin</a>
+            <a href="functiongenericskotlin.html">function generic kotlin</a>
+
 
             
     </div>
@@ -45,28 +47,62 @@
         
         <div class="borda">
             <div class="descricao">
-                <h2>oque são classes em kotlin ?</h2>
-                <h3>classes são estruturas de dados moldaveis , segue o exemplo abaixo</h3>
+                <h2>oque são generics em kotlin ?</h2>
+                <h3>generics são mecanismos que facilitam a flexibilidade na tipagem de informaçoes, principalmente em listas conjuntos e em mapas , segue o exemplo abaixo</h3>
                 <div class="exemplo">
                     <pre>
-class Customer                                  // 1
+class MutableStack<E>(vararg items: E) {              // 1
 
-class Contact(val id: Int, var email: String)   // 2
-                        
-fun main() {
-                        
-    val customer = Customer()                   // 3
-                            
-    val contact = Contact(1, "mary@gmail.com")  // 4
-                        
-    println(contact.id)                         // 5
-    contact.email = "jane@gmail.com"            // 6
-}
+    private val elements = items.toMutableList()
+                          
+    fun push(element: E) = elements.add(element)        // 2
+                          
+    fun peek(): E = elements.last()                     // 3
+                          
+    fun pop(): E = elements.removeAt(elements.size - 1)
+                          
+    fun isEmpty() = elements.isEmpty()
+                          
+    fun size() = elements.size
+                          
+    override fun toString() = "MutableStack(${elements.joinToString()})"
+  }
+                          
+  fun main() {
+    val stack = MutableStack(0.62, 3.14, 2.7)
+    stack.push(9.87)
+    println(stack)
+                          
+    println("peek(): ${stack.peek()}")
+    println(stack)
+                          
+    for (i in 1..stack.size()) {
+      println("pop(): ${stack.pop()}")
+      println(stack)
+    }
+  }
     
     <hr>
-1
+MutableStack(0.62, 3.14, 2.7, 9.87)
+peek(): 9.87
+MutableStack(0.62, 3.14, 2.7, 9.87)
+pop(): 9.87
+MutableStack(0.62, 3.14, 2.7)
+pop(): 2.7
+MutableStack(0.62, 3.14)
+pop(): 3.14
+MutableStack(0.62)
+pop(): 0.62
+MutableStack()
 
                </pre>
+                </div>
+                </div>
+            </div>
+            <div class="borda">
+                <div class="descricao">
+                    <h2>funçoes em listas</h2>
+                    <h3>PUSH: adiciona um elemento no final, PEEK :pegar o ultimo sem remover, POP :remove o ultimo elemento, ISEMPY :verificar se esta vazia; SIZE:verificar o tamanho</h3>
                 </div>
             </div>
         </div>
