@@ -29,7 +29,7 @@
 <div class="corpo">
     <div class="topicos">
             <a href="inicialkotlin.html">kotlin ?</a>
-            <a href="#">sintaxe do kotlin</a>
+            <a href="sintaxkotlin.html">sintaxe do kotlin</a>
             <a href="operaçãokotlin.html">operação no kotlin</a>
             <a href="variaveiskotlin.html">variaveis no kotlin</a>
             <a href="tiposdedadoskotlin.html">Tipos de dados Kotlin</a>
@@ -61,28 +61,33 @@
     <div class="cont">
         <div class="borda">
             <div class="descricao">
-                <h2>herança passando argumentos do construtor para super-classe em kotlin ?</h2>
-                <h3>é quando uma classe possa herdar suas caracteristicas com varios parametro aberto para ser usada pelas suas classes filhas como uma base geral, segue os exemplos abaixo</h3>
+                <h2>sealed classes em kotlin </h2>
+                <h3>é usado para restringir o uso de herança da classe que foi selada para um pacote, segue os exemplos abaixo</h3>
                 <div class="exemplo">
                     <pre>
 
-open class Lion(val name: String, val origin: String) {
-    fun sayHello() {
-        println("$name, the lion from $origin says: graoh!")
-    }
+sealed class Mammal(val name: String)                                                   // 1
+
+class Cat(val catName: String) : Mammal(catName)                                        // 2
+class Human(val humanName: String, val job: String) : Mammal(humanName)
+
+fun greetMammal(mammal: Mammal): String {
+    when (mammal) {                                                                     // 3
+        is Human -> return "Hello ${mammal.name}; You're working as a ${mammal.job}"    // 4
+        is Cat -> return "Hello ${mammal.name}"                                         // 5     
+    }                                                                                   // 6
 }
 
-class Asiatic(name: String) : Lion(name = name, origin = "India") // 1
-
 fun main() {
-    val lion: Lion = Asiatic("Rufo")                              // 2
-    lion.sayHello()
-}         
+    println(greetMammal(Cat("Snowy")))
+}       
 
     <hr>
 
-Rufo, the lion from India says: graoh!
-                </pre>
+Hello Snowy
+
+
+</pre>
                 </div>
             </div>
         </div>

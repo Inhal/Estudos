@@ -29,7 +29,7 @@
 <div class="corpo">
     <div class="topicos">
             <a href="inicialkotlin.html">kotlin ?</a>
-            <a href="#">sintaxe do kotlin</a>
+            <a href="sintaxkotlin.html">sintaxe do kotlin</a>
             <a href="operaçãokotlin.html">operação no kotlin</a>
             <a href="variaveiskotlin.html">variaveis no kotlin</a>
             <a href="tiposdedadoskotlin.html">Tipos de dados Kotlin</a>
@@ -61,29 +61,79 @@
     <div class="cont">
         <div class="borda">
             <div class="descricao">
-                <h2>herança passando argumentos do construtor para super-classe em kotlin ?</h2>
-                <h3>é quando uma classe possa herdar suas caracteristicas com varios parametro aberto para ser usada pelas suas classes filhas como uma base geral, segue os exemplos abaixo</h3>
+                <h2>object keyword em kotlin</h2>
+                <h3>é usado para obter uma implementação mais simples, segue os exemplos abaixo</h3>
                 <div class="exemplo">
                     <pre>
 
-open class Lion(val name: String, val origin: String) {
-    fun sayHello() {
-        println("$name, the lion from $origin says: graoh!")
+fun rentPrice(standardDays: Int, festivityDays: Int, specialDays: Int): Unit {  //1
+
+    val dayRates = object {                                                     //2
+        var standard: Int = 30 * standardDays
+        var festivity: Int = 50 * festivityDays
+        var special: Int = 100 * specialDays
     }
+
+    val total = dayRates.standard + dayRates.festivity + dayRates.special       //3
+
+    print("Total price: $$total")                                               //4
+
 }
 
-class Asiatic(name: String) : Lion(name = name, origin = "India") // 1
-
 fun main() {
-    val lion: Lion = Asiatic("Rufo")                              // 2
-    lion.sayHello()
-}         
+    rentPrice(10, 2, 1)                                                         //5
+}       
 
     <hr>
 
-Rufo, the lion from India says: graoh!
-                </pre>
+Total price: $500
+
+
+</pre>
                 </div>
+
+                <div class="exemplo">
+                    <pre>
+
+object DoAuth {                                                 //1 
+    fun takeParams(username: String, password: String) {        //2 
+        println("input Auth parameters = $username:$password")
+    }
+}
+
+fun main(){
+    DoAuth.takeParams("foo", "qwerty")                          //3
+}
+
+<hr>
+
+input Auth parameters = foo:qwerty
+                    </pre>
+                </div>
+
+            </div>
+            <div class="exemplo">
+                <pre>
+
+class BigBen {                                  //1 
+    companion object Bonger {                   //2
+        fun getBongs(nTimes: Int) {             //3
+            for (i in 1 .. nTimes) {
+                print("BONG ")
+            }
+        }
+    }
+}
+
+fun main() {
+    BigBen.getBongs(12)                         //4
+}
+
+<hr>
+
+BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG 
+
+</pre>
             </div>
         </div>
         

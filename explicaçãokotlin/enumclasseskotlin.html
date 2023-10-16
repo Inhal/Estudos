@@ -29,7 +29,7 @@
 <div class="corpo">
     <div class="topicos">
             <a href="inicialkotlin.html">kotlin ?</a>
-            <a href="#">sintaxe do kotlin</a>
+            <a href="sintaxkotlin.html">sintaxe do kotlin</a>
             <a href="operaçãokotlin.html">operação no kotlin</a>
             <a href="variaveiskotlin.html">variaveis no kotlin</a>
             <a href="tiposdedadoskotlin.html">Tipos de dados Kotlin</a>
@@ -61,28 +61,50 @@
     <div class="cont">
         <div class="borda">
             <div class="descricao">
-                <h2>herança passando argumentos do construtor para super-classe em kotlin ?</h2>
-                <h3>é quando uma classe possa herdar suas caracteristicas com varios parametro aberto para ser usada pelas suas classes filhas como uma base geral, segue os exemplos abaixo</h3>
+                <h2>enum classses em kotlin</h2>
+                <h3>é usado para definir um estado finito como loading ou sucesso, valores estaticos, segue os exemplos abaixo</h3>
                 <div class="exemplo">
                     <pre>
 
-open class Lion(val name: String, val origin: String) {
-    fun sayHello() {
-        println("$name, the lion from $origin says: graoh!")
-    }
+enum class State {
+    IDLE, RUNNING, FINISHED                           // 1
 }
 
-class Asiatic(name: String) : Lion(name = name, origin = "India") // 1
-
 fun main() {
-    val lion: Lion = Asiatic("Rufo")                              // 2
-    lion.sayHello()
-}         
+    val state = State.RUNNING                         // 2
+    val message = when (state) {                      // 3
+        State.IDLE -> "It's idle"
+        State.RUNNING -> "It's running"
+        State.FINISHED -> "It's finished"
+    }
+    println(message)
+}        
 
     <hr>
 
-Rufo, the lion from India says: graoh!
-                </pre>
+    It's running
+
+</pre>
+                </div>
+                <div class="exemplo">
+                    <pre>
+enum class Color(val rgb: Int) {                      // 1
+    RED(0xFF0000),                                    // 2
+    GREEN(0x00FF00),
+    BLUE(0x0000FF),
+    YELLOW(0xFFFF00);
+
+    fun containsRed() = (this.rgb and 0xFF0000 != 0)  // 3
+}
+
+fun main() {
+    val red = Color.RED
+    println(red)                                      // 4
+    println(red.containsRed())                        // 5
+    println(Color.BLUE.containsRed())                 // 6
+    println(Color.YELLOW.containsRed())               // 7
+}
+                    </pre>
                 </div>
             </div>
         </div>
