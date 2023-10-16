@@ -44,107 +44,50 @@
             <a href="rangeskotlin.html">ranges kotlin</a>
             <a href="igualdadekotlin.html">igualdade kotlin</a>
             <a href="ifelsekotlin.html">if else kotlin</a>
+            <a href="listkotlin.html">list kotlin</a>
+            <a href="setkotlin.html">set kotlin</a>
+            <a href="mapkotlin.html">map kotlin</a>
+            <a href="Inheritancekotlin.html">herança em kotlin</a>
+            <a href="InheritanceParameterizedconstructorkotlin.html">herança parametrizada kotlin</a>
+            <a href="InheritanceArgumentstosuperclasskotlin.html">herança para super class kotlin</a>
+            <a href="dataclasseskotlin.html">data classes kotlin</a>
+            <a href="enumclasseskotlin.html">enum classes kotlin</a>
+            <a href="sealedclasseskotlin.html">sealed classes kotlin</a>
+            <a href="ObjectKeywordkotlin.html">object keyword kotlin</a>
 
-            
+
+        
     </div>
     <div class="cont">
-        
         <div class="borda">
             <div class="descricao">
-                <h2>oque é for em kotlin ?</h2>
-                <h3>for é uma estrutura que realiza uma ação enquanto os criterios ainda não terminaram, ou seja um laço de repetição, segue os exemplos abaixo</h3>
+                <h2>herança passando argumentos do construtor para super-classe em kotlin ?</h2>
+                <h3>é quando uma classe possa herdar suas caracteristicas com varios parametro aberto para ser usada pelas suas classes filhas como uma base geral, segue os exemplos abaixo</h3>
                 <div class="exemplo">
                     <pre>
 
-fun main(args: Array &lt;String>) {
-    val cakes = listOf("carrot", "cheese", "chocolate")
+import java.util.Random
 
-    for (cake in cakes) {                               // 1
-        println("Yummy, it's a $cake cake!")
-    }
-
-}                   
-    <hr>
-
-Yummy, it's a carrot cake!
-Yummy, it's a cheese cake!
-Yummy, it's a chocolate cake!
-               </pre>
-                </div>
-            </div>
-        </div>
-        <div class="borda">
-            <div class="descricao">
-                <h2>oque é while e do-while em kotlin ?</h2>
-                <h3>o while executa o bloco de codico enquanto a condição é verdadeira e o do-while executa o bloco de codico e depois checa a condição, segue os exemplos abaixo</h3>
-                <div class="exemplo">
-                    <pre>
-
-fun eatACake() = println("Eat a Cake")
-fun bakeACake() = println("Bake a Cake")
-
-fun main(args: Array<String>) {
-    var cakesEaten = 0
-    var cakesBaked = 0
-    
-    while (cakesEaten < 5) {                    // 1
-        eatACake()
-        cakesEaten ++
-    }
-    
-    do {                                        // 2
-        bakeACake()
-        cakesBaked++
-    } while (cakesBaked < cakesEaten)
-
-}                  
-    <hr>
-
-Eat a Cake
-Eat a Cake
-Eat a Cake
-Eat a Cake
-Eat a Cake
-Bake a Cake
-Bake a Cake
-Bake a Cake
-Bake a Cake
-Bake a Cake
-
-               </pre>
-                </div>
-            </div>
-        </div>
-        <div class="borda">
-            <div class="descricao">
-                <h2>oque é interators em kotlin ?</h2>
-                <h3>iterators é oque torna uma estrutura de classe ela interavel, segue os exemplos abaixo</h3>
-                <div class="exemplo">
-                    <pre>
-class Animal(val name: String)
-
-class Zoo(val animals: List<Animal>) {
-
-    operator fun iterator(): Iterator<Animal> {             // 1
-        return animals.iterator()                           // 2
+class LuckDispatcher {                    //1 
+    fun getNumber() {                     //2 
+        var objRandom = Random()
+        println(objRandom.nextInt(90))
     }
 }
 
 fun main() {
-
-    val zoo = Zoo(listOf(Animal("zebra"), Animal("lion")))
-
-    for (animal in zoo) {                                   // 3
-        println("Watch out, it's a ${animal.name}")
-    }
-
-}                   
+    val d1 = LuckDispatcher()             //3
+    val d2 = LuckDispatcher()
+    
+    d1.getNumber()                        //4 
+    d2.getNumber()
+}
     <hr>
 
-Watch out, it's a zebra
-Watch out, it's a lion
+24
+75       
 
-               </pre>
+</pre>
                 </div>
             </div>
         </div>

@@ -44,105 +44,65 @@
             <a href="rangeskotlin.html">ranges kotlin</a>
             <a href="igualdadekotlin.html">igualdade kotlin</a>
             <a href="ifelsekotlin.html">if else kotlin</a>
+            <a href="listkotlin.html">list kotlin</a>
+            <a href="setkotlin.html">set kotlin</a>
+            <a href="mapkotlin.html">map kotlin</a>
+            <a href="Inheritancekotlin.html">herança em kotlin</a>
+            <a href="InheritanceParameterizedconstructorkotlin.html">herança parametrizada kotlin</a>
+            <a href="InheritanceArgumentstosuperclasskotlin.html">herança para super class kotlin</a>
+
+            
+
 
             
     </div>
     <div class="cont">
-        
         <div class="borda">
             <div class="descricao">
-                <h2>oque é for em kotlin ?</h2>
-                <h3>for é uma estrutura que realiza uma ação enquanto os criterios ainda não terminaram, ou seja um laço de repetição, segue os exemplos abaixo</h3>
+                <h2>oque é map em kotlin ?</h2>
+                <h3>map é uma coleção de pares chave/valor, onde cada chave é única e é usada para recuperar o valor correspondente. Para criar mapas, existem funções mapOf()e mutableMapOf(), segue os exemplos abaixo</h3>
                 <div class="exemplo">
                     <pre>
+const val POINTS_X_PASS: Int = 15
+val EZPassAccounts: MutableMap<Int, Int> = mutableMapOf(1 to 100, 2 to 100, 3 to 100)   // 1
+val EZPassReport: Map<Int, Int> = EZPassAccounts                                        // 2
 
-fun main(args: Array &lt;String>) {
-    val cakes = listOf("carrot", "cheese", "chocolate")
+fun updatePointsCredit(accountId: Int) {
+    if (EZPassAccounts.containsKey(accountId)) {                                        // 3
+        println("Updating $accountId...")                                               
+        EZPassAccounts[accountId] = EZPassAccounts.getValue(accountId) + POINTS_X_PASS  // 4
+    } else {
+        println("Error: Trying to update a non-existing account (id: $accountId)")
+    } 
+}
 
-    for (cake in cakes) {                               // 1
-        println("Yummy, it's a $cake cake!")
-    }
-
-}                   
-    <hr>
-
-Yummy, it's a carrot cake!
-Yummy, it's a cheese cake!
-Yummy, it's a chocolate cake!
-               </pre>
-                </div>
-            </div>
-        </div>
-        <div class="borda">
-            <div class="descricao">
-                <h2>oque é while e do-while em kotlin ?</h2>
-                <h3>o while executa o bloco de codico enquanto a condição é verdadeira e o do-while executa o bloco de codico e depois checa a condição, segue os exemplos abaixo</h3>
-                <div class="exemplo">
-                    <pre>
-
-fun eatACake() = println("Eat a Cake")
-fun bakeACake() = println("Bake a Cake")
-
-fun main(args: Array<String>) {
-    var cakesEaten = 0
-    var cakesBaked = 0
-    
-    while (cakesEaten < 5) {                    // 1
-        eatACake()
-        cakesEaten ++
-    }
-    
-    do {                                        // 2
-        bakeACake()
-        cakesBaked++
-    } while (cakesBaked < cakesEaten)
-
-}                  
-    <hr>
-
-Eat a Cake
-Eat a Cake
-Eat a Cake
-Eat a Cake
-Eat a Cake
-Bake a Cake
-Bake a Cake
-Bake a Cake
-Bake a Cake
-Bake a Cake
-
-               </pre>
-                </div>
-            </div>
-        </div>
-        <div class="borda">
-            <div class="descricao">
-                <h2>oque é interators em kotlin ?</h2>
-                <h3>iterators é oque torna uma estrutura de classe ela interavel, segue os exemplos abaixo</h3>
-                <div class="exemplo">
-                    <pre>
-class Animal(val name: String)
-
-class Zoo(val animals: List<Animal>) {
-
-    operator fun iterator(): Iterator<Animal> {             // 1
-        return animals.iterator()                           // 2
+fun accountsReport() {
+    println("EZ-Pass report:")
+    EZPassReport.forEach {                                                              // 5
+        k, v -> println("ID $k: credit $v")
     }
 }
 
 fun main() {
-
-    val zoo = Zoo(listOf(Animal("zebra"), Animal("lion")))
-
-    for (animal in zoo) {                                   // 3
-        println("Watch out, it's a ${animal.name}")
-    }
-
-}                   
+    accountsReport()                                                                    // 6
+    updatePointsCredit(1)                                                               // 7
+    updatePointsCredit(1)                                                               
+    updatePointsCredit(5)                                                               // 8 
+    accountsReport()                                                                    // 9
+}               
     <hr>
 
-Watch out, it's a zebra
-Watch out, it's a lion
+EZ-Pass report:
+ID 1: credit 100
+ID 2: credit 100
+ID 3: credit 100
+Updating 1...
+Updating 1...
+Error: Trying to update a non-existing account (id: 5)
+EZ-Pass report:
+ID 1: credit 130
+ID 2: credit 100
+ID 3: credit 100
 
                </pre>
                 </div>

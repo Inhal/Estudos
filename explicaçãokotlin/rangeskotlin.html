@@ -51,103 +51,82 @@
         
         <div class="borda">
             <div class="descricao">
-                <h2>oque é for em kotlin ?</h2>
-                <h3>for é uma estrutura que realiza uma ação enquanto os criterios ainda não terminaram, ou seja um laço de repetição, segue os exemplos abaixo</h3>
+                <h2>Ranges em kotlin ?</h2>
+                <h3>ranges são expressoes para uma contagem como ..: de 1 em 1, until: sem contar o ultimo, step: contando com um numero q n seja de 1 em 1, dowTo: é uma contagem regressiva, segue os exemplos abaixo</h3>
                 <div class="exemplo">
                     <pre>
-
-fun main(args: Array &lt;String>) {
-    val cakes = listOf("carrot", "cheese", "chocolate")
-
-    for (cake in cakes) {                               // 1
-        println("Yummy, it's a $cake cake!")
-    }
-
-}                   
-    <hr>
-
-Yummy, it's a carrot cake!
-Yummy, it's a cheese cake!
-Yummy, it's a chocolate cake!
-               </pre>
-                </div>
-            </div>
-        </div>
-        <div class="borda">
-            <div class="descricao">
-                <h2>oque é while e do-while em kotlin ?</h2>
-                <h3>o while executa o bloco de codico enquanto a condição é verdadeira e o do-while executa o bloco de codico e depois checa a condição, segue os exemplos abaixo</h3>
-                <div class="exemplo">
-                    <pre>
-
-fun eatACake() = println("Eat a Cake")
-fun bakeACake() = println("Bake a Cake")
-
-fun main(args: Array<String>) {
-    var cakesEaten = 0
-    var cakesBaked = 0
-    
-    while (cakesEaten < 5) {                    // 1
-        eatACake()
-        cakesEaten ++
-    }
-    
-    do {                                        // 2
-        bakeACake()
-        cakesBaked++
-    } while (cakesBaked < cakesEaten)
-
-}                  
-    <hr>
-
-Eat a Cake
-Eat a Cake
-Eat a Cake
-Eat a Cake
-Eat a Cake
-Bake a Cake
-Bake a Cake
-Bake a Cake
-Bake a Cake
-Bake a Cake
-
-               </pre>
-                </div>
-            </div>
-        </div>
-        <div class="borda">
-            <div class="descricao">
-                <h2>oque é interators em kotlin ?</h2>
-                <h3>iterators é oque torna uma estrutura de classe ela interavel, segue os exemplos abaixo</h3>
-                <div class="exemplo">
-                    <pre>
-class Animal(val name: String)
-
-class Zoo(val animals: List<Animal>) {
-
-    operator fun iterator(): Iterator<Animal> {             // 1
-        return animals.iterator()                           // 2
-    }
+for(i in 0..3) {             // 1
+    print(i)
 }
+print(" ")
 
-fun main() {
+for(i in 0 until 3) {        // 2
+    print(i)
+}
+print(" ")
 
-    val zoo = Zoo(listOf(Animal("zebra"), Animal("lion")))
+for(i in 2..8 step 2) {      // 3
+    print(i)
+}
+print(" ")
 
-    for (animal in zoo) {                                   // 3
-        println("Watch out, it's a ${animal.name}")
-    }
-
-}                   
+for (i in 3 downTo 0) {      // 4
+    print(i)
+}
+print(" ")
+                  
     <hr>
 
-Watch out, it's a zebra
-Watch out, it's a lion
+0123 012 2468 3210 
 
                </pre>
                 </div>
+                <div class="exemplo">
+                    <pre>
+
+for (c in 'a'..'d') {        // 1
+    print(c)
+}
+print(" ")
+
+for (c in 'z' downTo 's' step 2) { // 2
+    print(c)
+}
+print(" ")                 
+    <hr>
+
+abcd zxvt 
+
+        
+        </div>
             </div>
         </div>
+        <div class="borda">
+            <div class="descri">
+                <h2>ranges com if e else e for  </h2>
+                <div class="exemplo">
+
+<pre>
+fun main() {
+    val x = 2
+    if (x in 1..5) {            // 1
+        print("x is in range from 1 to 5")
+    }
+    println()
+    
+    if (x !in 6..10) {          // 2
+        print("x is not in range from 6 to 10")
+    }
+} 
+    <hr>
+x is in range from 1 to 5
+x is not in range from 6 to 10
+                       
+</pre>
+                </div>
+            </div>
+        </div>
+        
         
     </div>
 </div>
