@@ -63,21 +63,21 @@
         <div class="borda">
             <div class="descricao">
                 <h2>oque são varags em kotlin ?</h2>
-                <h3>varags são parametros que fazem com que seja possivel colocar quantas mensagens que você quiser contanto que seja do mesmo tipo pre estipulado , segue o exemplo abaixo</h3>
+                <h3>varags são parametros que fazem com que seja possivel colocar quantas mensagens que você quiser contanto que seja do mesmo tipo pré estipulado , segue o exemplo abaixo</h3>
                 <div class="exemplo">
                     <pre>
 fun main() {
-    fun printAll(vararg messages: String) {                            // 1
+    fun printAll(vararg messages: String) {                            
         for (m in messages) println(m)
 }
-    printAll("Hello", "Hallo", "Salut", "Hola", "你好")                 // 2
+    printAll("Hello", "Hallo", "Salut", "Hola", "你好")                
                         
-    fun printAllWithPrefix(vararg messages: String, prefix: String) {  // 3
+    fun printAllWithPrefix(vararg messages: String, prefix: String) {  
         for (m in messages) println(prefix + m)
 }
     printAllWithPrefix(
         "Hello", "Hallo", "Salut", "Hola", "你好",
-        prefix = "Greeting: "                                          // 4
+        prefix = "Greeting: "                                          
 )
                         
     fun log(vararg entries: String) {
